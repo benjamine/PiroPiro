@@ -133,3 +133,7 @@ In order to run tests you need:
  - PiroPiro.BrowserFactory: the underlying web driver, by default Selenium WebDriver is used
  - PiroPiro.Selenium.Driver: if using Selenium, here you can choose the specific browser to instantiate, by default 'firefox'
 - Right-click on PiroPiro.TestSite.Spec project and click on "Run Unit Tests" (you can use NUnit GUI or NUnit console if you prefer)
+
+License
+----------------------------
+[MIT License](https://github.com/benjamine/PiroPiro/blob/master/MIT-LICENSE.txt)
