@@ -3,6 +3,7 @@ PiroPiro - Browser automation with a real user interaction API
 
 PiroPiro is a .Net automated testing framework inspired in [Capybara](https://github.com/jnicklas/capybara).
 
+![PiroPiro Logo](https://github.com/benjamine/PiroPiro/raw/master/PiroPiro/icon/piropiro.png)
 
 PiroPiro helps you test web applications by simulating how a real user would interact with your app. 
 It is agnostic about the driver running your tests and comes with SpecFlow and Selenium support built in. 
@@ -10,6 +11,52 @@ A [Zombie.JS](http://zombie.labnotes.org/) (Node.JS headless "insanely fast" bro
 
 
 (Description partially stolen from capybara project)
+
+Installing
+----------------
+
+NuGet Packages will be published soon. 
+
+In the meantime you can install by referencing the compiled assemblies, and structuring your feature spec project based on PiroPiro.TestSite.Spec project.
+
+
+Code sample
+--------------------
+
+``` csharp
+
+        [When(@"login as ""(.*)""" with password ""(.*)""")]
+        public void WhenLoginAsWithPassword(string usernameOrEmail, string password)
+        {
+            Page.Visit("/login");
+            
+            Page.WithinFieldSet("Log in", fs => {
+               // find fields using label element caption, input name or Sizzle css selectors
+               fs.Field("Username or email").FillWith(usernameOrEmail);
+               fs.Field("Password").FillWith(password);
+               fs.Field("Remember me").Check();
+            });
+            
+            Page.Button("Log in").Click();
+            
+            // explicit wait
+            Page.Wait(Page.ElementWithText("Welcome"), seconds: 2);
+        }
+
+        [Then(@"user logged in successfully with role ""(.*)""")]
+        public void UserIsLoggedInWithRole(string role)
+        {        
+            // query using Sizzle (the jQuery selector engine, css syntax + extensions)
+            Page.Query(".error").Count().ShouldBe(0);
+            
+            // find an image by its tooltip
+            Page.Image("user picture");
+            
+            Page.QuerySingle(".role").Text.ShouldContain(role);
+        }
+
+```
+
 
 Project Structure
 --------------------------------------
