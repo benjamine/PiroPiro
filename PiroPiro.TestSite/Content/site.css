@@ -1,0 +1,97 @@
+﻿
+body
+{
+    position: relative;
+    padding-top: 90px;
+    background: url(images/piropiro-bg.png) no-repeat;
+}
+
+.brand
+{
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+.brand:hover
+{
+    color: white;
+    text-shadow: 0 0 4px yellow;
+}
+
+.navbar
+{
+    box-shadow: 0 0 10px black;
+}
+
+/* Jumbotrons
+-------------------------------------------------- */
+.jumbotron
+{
+    position: relative;
+}
+.jumbotron h1
+{
+    margin-bottom: 9px;
+    font-size: 81px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+.jumbotron p
+{
+    margin-bottom: 18px;
+    font-weight: 300;
+}
+.jumbotron .btn-large
+{
+    font-size: 20px;
+    font-weight: normal;
+    padding: 14px 24px;
+    margin-right: 10px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+.jumbotron .btn-large small
+{
+    font-size: 14px;
+}
+
+/* Masthead (docs home) */
+.masthead
+{
+    padding-top: 36px;
+    margin-bottom: 72px;
+}
+.masthead h1, .masthead p
+{
+    text-align: center;
+}
+.masthead h1
+{
+    margin-bottom: 18px;
+}
+.masthead p
+{
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 30px;
+    line-height: 36px;
+}
+
+
+.subhead
+{
+    padding-bottom: 0;
+    margin-bottom: 9px;
+}
+.subhead h1
+{
+    font-size: 54px;
+}
+
+.footer
+{
+    margin-top: 45px;
+    padding: 35px 0 36px;
+    border-top: 1px solid #E5E5E5;
+}

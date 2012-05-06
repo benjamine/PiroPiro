@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - PiroPiro Test</title>
+    <link href="@Url.Content("~/Content/aspnetmvc.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/bootstrap.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/site.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/modernizr-2.5.3.js")" type="text/javascript"></script>
+</head>
+<body>
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span
+                    class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                </a>@Html.ActionLink("PiroPiro Test", "Index", "Home", null, new { @class = "brand" })</a>
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li>@Html.ActionLink("Test1", "Index", "Test1", null, new { @class = "active" })</li>
+                        <li class="divider-vertical"></li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <header class="jumbotron subhead" id="overview">
+            <h1>@ViewBag.Title</h1>
+            <p class="lead">@ViewBag.SubTitle</p>
+        </header>
+        <section id="global">
+            @RenderBody()
+        </section>
+        <footer class="footer">
+        <p class="pull-right back-to-top"><a href="#">Back to top</a></p>
+        <p>Designed and built to serve as a test target of PiroPiro.</p>
+      </footer>
+    </div>
+    <div class="extLives">
+    </div>
+    <script src="@Url.Content("~/Scripts/jquery-1.7.2.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/bootstrap.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/_main.js")" type="text/javascript"></script>
+</body>
+</html>
