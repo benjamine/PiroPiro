@@ -134,11 +134,14 @@ In order to run tests you need:
  - PiroPiro.Selenium.Driver: if using Selenium, here you can choose the specific browser to instantiate, by default 'firefox'
 - Right-click on PiroPiro.TestSite.Spec project and click on "Run Unit Tests" (you can use NUnit GUI or NUnit console if you prefer)
 
-The name
+Why PiroPiro
 ---------------------
 
 Piro-piro is just another name for capybara.
 (http://en.wikipedia.org/wiki/Hydrochoerus_hydrochaeris)
+
+The first version of this library has been written as part of my work at [Tercer Planeta](http://www.tercerplaneta.com).
+When I left my job there we decided to open source this for anyone to freely read, use, fork, and contribute back.
 
 License
 ----------------------------
